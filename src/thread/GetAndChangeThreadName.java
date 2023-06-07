@@ -10,13 +10,11 @@ public class GetAndChangeThreadName {
             Thread thread = new Thread() {
                 @Override
                 public void run() {
-                    System.out.println(getName() + " 실행");
+                    System.out.println(Thread.currentThread().getName() + " 실행");
                 }
             };
-             thread.run();
+             thread.start();
         }
-
-
 
         Thread chatThread = new Thread() {
             @Override
